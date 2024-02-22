@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Product
+from .models import Product, Order
 
 # Create your views here.
 
@@ -10,4 +10,6 @@ def products(request):
     return render(request, 'store/products.html', context)
 
 def cart(request):
-    return render(request, 'store/cart.html')
+    orders = Order.objects.all()
+    context = {'orders': orders}
+    return render(request, 'store/cart.html', context)
