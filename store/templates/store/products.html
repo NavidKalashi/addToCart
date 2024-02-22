@@ -3,4 +3,19 @@
 {% block content %}
 <h1>products</h1>
 
+{% for product in products %}
+<ul>
+    <a href="">
+        <li>
+            <h3>{{product.name}}</h3>
+            <p>{{product.about}}</p>
+            <p>{{product.price}}</p>
+            <button style='background-color: green; color: white'>add to cart</button>
+        </li>
+    </a>
+    <hr>
+</ul>
+
+{% endfor %}
+
 {% endblock content %}
