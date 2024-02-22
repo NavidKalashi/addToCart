@@ -8,7 +8,7 @@
 <body>
     <nav>
         <a href="{% url 'products' %}">Home</a>
-        <a href="">cart</a>
+        <a href="{% url 'cart' %}">cart</a>
     </nav>
     {% block content %}{% endblock content %}
 </body>
